@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es"> 
 
 <head>
     <title>Aplicación Web - CRUD Usuarios</title>
@@ -83,12 +83,13 @@
                 <td><b>Opciones</b></td>
                 <td><b>Estado</b></td>
             </tr>
+             <!-- ko foreach: usuarios -->
             <tr>
                 <td>
                     <span class="label">1</span>
                 </td>
                 <td>
-                    <p><b>Nombre:&nbsp;&nbsp;</b>NombreApellidos1</p>
+                    <p><b>Nombre:&nbsp;&nbsp;</b><span></span>NombreUsuario #1</p>
                     <p><b>Email:&nbsp;&nbsp;</b><a href="mailto:mail1@mail.com<">mail1@mail.com</a></p>
                 </td>
                 <td>
@@ -96,7 +97,7 @@
                     <button class="btn">Borrar</button>
                 </td>
                 <td>
-                    <span class="label">Inactivo</span>
+                    <span class="badge badge-danger">Inactivo</span>
                 </td>
             </tr>
             <tr>
@@ -104,7 +105,7 @@
                     <span class="label">2</span>
                 </td>
                 <td>
-                    <p><b>Nombre:&nbsp;&nbsp;</b>NombreApellidos2</p>
+                    <p><b>Nombre:&nbsp;&nbsp;</b>NombreUsuario #2</p>
                     <p><b>Email:&nbsp;&nbsp;</b><a href="mailto:mail2@mail.com<">mail2@mail.com</a></p>
                 </td>
                 <td>
@@ -112,9 +113,10 @@
                     <button class="btn">Borrar</button>                    
                 </td>
                 <td>
-                    <span class="label">Activo</span>
+                    <span class="badge badge-success">Activo</span>
                 </td>
             </tr>
+            <!-- /ko -->
         </table>
         <div class="row">
             <div class="col-12"><button class="btn float-right">Añadir Usuario</button></div>
