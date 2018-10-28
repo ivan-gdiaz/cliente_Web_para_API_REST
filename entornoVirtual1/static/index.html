@@ -75,7 +75,7 @@
     </nav>
 
     <div id="cuerpo" class="container">
-        <!-- Tabla estilo cebra con datos estáticos de ejemplo para hacerse una idea de como quedará -->
+        <!-- Tabla estilo cebra con datos vinculados  -->
         <table class="table table-striped" style="margin-top:50px;">
             <tr>
                 <td style="width: 1px;"></td>
@@ -90,7 +90,7 @@
                 </td>
                 <td>
                     <p><b>Nombre:&nbsp;&nbsp;</b><span data-bind="text: nombreUsuario"></span></p>
-                    <p><b>Email:&nbsp;&nbsp;</b><a data-bind="attr: {href: 'mailto:' + email}, text:email"></a></p>
+                    <p><b>Email:&nbsp;&nbsp;</b><a data-bind="attr: {href: 'mailto:' + email}, text: email"></a></p>
                 </td>
                 <td>
                     <button data-bind="click: $parent.editar" class="btn">Editar</button>
@@ -133,6 +133,8 @@
                 alert("Añadir");
             }
             self.editar = function (usuario) {
+                // La manera correcta de acceder y/o modificar un objeto observable es invocarlo
+                // como una función
                 alert("Editar: " + usuario.nombreUsuario());
             }
             self.borrar = function (usuario) {
