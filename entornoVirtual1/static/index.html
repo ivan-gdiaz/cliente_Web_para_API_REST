@@ -115,7 +115,7 @@
             self.usuariosURI = 'http://localhost:5000/v1/usuarios';
             self.usuarios = ko.observableArray();
 
-            self.ajax = function(uri, method, data) {
+            self.miAjax = function(uri, method, data) {
                 var request = {
                     url: uri,
                     type: method,
@@ -145,7 +145,7 @@
             }
             
             // Para el get que obtiene la colección de usuarios completa NO pasamos datos 
-            self.ajax(self.usuariosURI,'GET').done(function(data) {
+            self.amiAjax(self.usuariosURI,'GET').done(function(data) {
                 for(var i=0; i<data.usuarios.length; i++){
                     self.usuarios.push({
                         id: ko.observable(data.usuarios[i].id),
