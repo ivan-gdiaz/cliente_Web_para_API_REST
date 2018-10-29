@@ -145,7 +145,7 @@
             }
             
             // Para el get que obtiene la colección de usuarios completa NO pasamos datos 
-            self.amiAjax(self.usuariosURI,'GET').done(function(data) {
+            self.miAjax(self.usuariosURI,'GET').done(function(data) {
                 for(var i=0; i<data.usuarios.length; i++){
                     self.usuarios.push({
                         id: ko.observable(data.usuarios[i].id),
